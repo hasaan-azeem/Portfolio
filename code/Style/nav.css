@@ -91,43 +91,6 @@
     border-bottom: 0.21vw solid var(--primary-color);
 }
 
-.nav-list ul li .dropdown-menu {
-    display: none;
-    /* Initially hidden */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--light-background-color);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 10px 0;
-    z-index: 999;
-}
-
-.nav-list ul li .dropdown-menu li {
-    list-style: none;
-    padding: 10px 15px;
-    white-space: nowrap;
-    /* Prevent text wrapping */
-}
-
-.nav-list ul li .dropdown-menu li a {
-    text-align: left;
-    text-decoration: none;
-    color: var(--universal-color);
-    font-family: 'Poppins';
-    font-size: 0.9rem;
-    font-weight: 500;
-    display: block;
-    transition: 0.3s ease, color 0.3s ease;
-}
-
-.nav-list ul li:hover .dropdown-menu {
-    display: block;
-    /* Show dropdown on hover */
-    animation: fadeIn 0.3s ease;
-    /* Optional animation */
-}
 
 /* Optional Animation */
 @keyframes fadeIn {
@@ -139,5 +102,69 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Hamburger Icon - hidden by default */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--universal-color);
+    margin-right: 6vw;
+    z-index: 1001;
+}
+
+/* Mobile & Tablet View */
+@media (max-width: 1024px) {
+    .nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--light-background-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 2vh 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-list ul li {
+        margin: 0;
+    }
+
+    .mail {
+        display: none;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        padding-left: 0;
+    }
+
+    .nav-list ul li .dropdown-menu li {
+        padding: 8px 0;
     }
 }

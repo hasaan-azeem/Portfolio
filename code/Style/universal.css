@@ -30,6 +30,7 @@ body.fade-out {
     opacity: 0;
 }
 
+
 /* Page transition overlay */
 #page-transition {
     position: fixed;

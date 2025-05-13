@@ -12,3 +12,10 @@
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+ const hamburger = document.getElementById('hamburger');
+  const navList = document.getElementById('nav-list');
+
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
