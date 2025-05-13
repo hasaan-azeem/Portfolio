@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #068AB6;
+    --light-background-color: rgb(245, 245, 245, 1);
+    --universal-color: #000;
+    --para-color: #444040b0;
+}
+
+.container {
+    width: 90%;
+    /* max-width: 1200px; */
+    margin: 2.5rem auto;
+}
+
+/* Header Section */
+
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: -1.5rem;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+.category{
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    font-size: 0.875rem;
+    padding: 0.3rem 1rem;
+    border-radius: 16px;
+    background-color: #f1f1f1;
+    color: #0073e6;
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+.container p {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+/* Blog Content and Posts */
+main {
+    padding: 50px 0;
+}
+
+.blog-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.blog-posts {
+    text-align: left;
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+}
+
+.post h3 {
+    font-size: 1.3rem;
+    margin: 0.5rem;
+}
+
+.post p {
+    text-align: left;
+    margin: 0.5rem;
+}
+
+.post .excerpt {
+    font-size: 1rem;
+    margin: 20px;
+    color: var(--para-color);
+}
+
+.read-more {
+    display: inline-block;
+    margin: 20px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--primary-color);
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+#scroll-top {
+    position: fixed;
+    bottom: 2vh;
+    right: 2vw;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    font-size: 2vw;
+    cursor: pointer;
+    display: none;
+}
+
+#scroll-top:hover {
+    background-color: #05597a;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #068AB6;
+    --light-background-color: rgb(245, 245, 245, 1);
+    --universal-color: #000;
+    --para-color: #444040b0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#services {
+    padding: 2rem;
+}
+
+#services .head {
+    text-align: center;
+}
+
+#services .head h2 {
+    font-size: 2.5rem;
+    margin-bottom: -1.5rem;
+    text-align: center;
+}
+
+#services .head p {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+
+}
+
+#services .card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    width: 30%;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 5rem;
+    /* Changed to rem for scalability */
+    height: 5rem;
+    /* Changed to rem for scalability */
+    margin-bottom: 1.5rem;
+}
+
+.card .card-title {
+    font-size: 1.4rem;
+    /* Changed to rem */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card .card-text {
+    font-size: 1rem;
+    /* Changed to rem */
+    margin-bottom: 1.5rem;
+}
+
+.card .card-btn {
+    padding: 0.5rem 1rem;
+    /* Changed to rem */
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    /* Rounded button */
+}
+
+.card .card-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+#scroll-top {
+    position: fixed;
+    bottom: 2vh;
+    right: 2vw;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    font-size: 2vw;
+    cursor: pointer;
+    display: none;
+}
+
+#scroll-top:hover {
+    background-color: #05597a;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    #services {
+        padding: 1.5rem;
+    }
+
+    #services .card-container {
+        justify-content: center;
+        /* Center the cards on smaller screens */
+    }
+
+    .card {
+        width: 80%;
+        /* Cards take up more width on smaller screens */
+        padding: 1.5rem;
+        /* Adjust padding for smaller screens */
+    }
+
+    .card img {
+        width: 4rem;
+        /* Smaller images on mobile */
+        height: 4rem;
+        /* Smaller images on mobile */
+    }
+
+    .card .card-title {
+        font-size: 1.25rem;
+        /* Smaller font on mobile */
+    }
+
+    .card .card-text {
+        font-size: 0.875rem;
+        /* Smaller font on mobile */
+    }
+
+    .card .card-btn {
+        padding: 0.5rem 1.5rem;
+        /* Adjust padding for mobile */
+    }
+}
+
+/* Very small screens */
+@media screen and (max-width: 480px) {
+    #services .head h2 {
+        font-size: 1.2rem;
+        /* Smaller heading on small screens */
+    }
+
+    .card {
+        width: 100%;
+        /* Cards take full width on small screens */
+    }
+
+    .card .card-title {
+        font-size: 1rem;
+        /* Smaller font on very small screens */
+    }
+
+    .card .card-text {
+        font-size: 0.8rem;
+        /* Smaller text on very small screens */
+    }
+
+    .card .card-btn {
+        padding: 0.5rem 1.2rem;
+        /* Smaller button on very small screens */
+    }
+}
