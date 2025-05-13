@@ -1157,3 +1157,19 @@
  #scroll-top:hover {
      background-color: #05597a;
  }
+
+ @media (max-width: 768px) {
+    #scroll-top{
+        width: 8vw;
+        height: 8vw;
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #scroll-top{
+        width: 8vw;
+        height: 8vw;
+        font-size: 4vw;
+    }
+}
